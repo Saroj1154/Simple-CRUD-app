@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%= form_with model: @employees do |form| %>
+        <div>
+            <%= form.label :name %> 
+            <%= form.text_field :name %><br><hr>
+        </div>
+        <div>
+            <%= form.label :age %>
+            <%= form.number_field :age %><br> <hr>
+        </div>
+        <div>
+            <%= form.label :role %> 
+            <%= form.text_field :role %><br><hr>
+        </div>
+        <div>
+            <%= form.label :salary%> 
+            <%= form.number_field :salary%><br><hr>
+        </div>
+        <div class="button">
+            <%= form.submit %> <br><hr>
+        </div>
+    <% end %>
+</body>
+</html>

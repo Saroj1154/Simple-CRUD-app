@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= employees_path %></title>
+</head>
+<body>
+
+    <h1 style="flex: auto;">Name:  <%= @employees.name %></h1>
+    <h2>Age:  <%= @employees.age %></h2>
+    <h3>Role:  <%= @employees.role %></h3>
+    <h4>Salary:  <%= @employees.salary%></h4>
+    <%= link_to "Edit", edit_employee_path(@employees) %>
+    <%= link_to "Delete", employee_path(@employees), method: :delete, data: { confirm: "Are you sure?" }%>
+</body>
+</html>
